@@ -14,6 +14,10 @@ pipeline {
                 echo 'Hello, JDK'
                 sh 'java -version'
             }
+        stage ("wait_for_testing")
+            {
+                sh 'sleep 300'
+            }
         }
     }
 }
