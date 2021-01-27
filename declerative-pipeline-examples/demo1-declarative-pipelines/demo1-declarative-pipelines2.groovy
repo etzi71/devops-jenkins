@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'Hello, Maven'
                 sh 'mvn --version'
+                sh 'sleep 60'
             }
         }
         stage('Example Test') {
@@ -13,10 +14,6 @@ pipeline {
             steps {
                 echo 'Hello, JDK'
                 sh 'java -version'
-            }
-        stage ("wait_for_testing")
-            {
-                sh 'sleep 300'
             }
         }
     }
