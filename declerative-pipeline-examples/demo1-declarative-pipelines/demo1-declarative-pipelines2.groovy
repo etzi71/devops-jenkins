@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Hello, Maven'
                 sh 'mvn --version'
-                sh 'sleep 1m'
+                sh 'sleep 5m'
             }
         }
         stage('Example Test') {
